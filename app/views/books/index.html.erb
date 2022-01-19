@@ -1,14 +1,88 @@
-<div class="w-full">
-  <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-  <% end %>
-
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Books</h1>
-    <%= link_to 'New book', new_book_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+<section class="hero is-ligth is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <figure class="image is-512x512 is-inline-block">
+        <%= image_tag("Logo.png") %>
+      </figure>
+    </div>
   </div>
+</section>
+<div class="box cta">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
 
-  <div id="books" class="min-w-full">
-    <%= render @books %>
-  </div>
+
+    <div id="navbarBasicExample" class="navbar-menu has-text-centered">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Książki
+        </a>
+
+        <a class="navbar-item">
+          Zamówienia
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Filtry
+          </a>
+
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              Od najtańszej do najdroższej
+            </a>
+            <a class="navbar-item">
+              Alfabetycznie
+            </a>
+          </div>
+        </div>
+        <a class="navbar-item">
+          Kontakt
+        </a>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-warning">
+              <strong>Zarejestruj się</strong>
+            </a>
+            <a class="button is-light">
+              Zaloguj się
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
 </div>
+<section class="container">
+  <% @books.each_slice(3) do |batch| %>
+    <div class="columns features">
+      <% batch.each do |book| %>
+        <div class="column is-4">
+          <div class="card is-shady">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="" alt="Placeholder image" class="modal-button" data-target="modal-image2">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                <h5><%= book.name %></h5>
+                <h6><%= book.price %></h6>
+                <div>
+                  In stock: <span class="is-size-6 has-text-weight-semibold	"><%= book.quantity %></span>
+                </div>
+                <span class="button is-warning">
+                <%= link_to book_path(book) do %>
+                  <span class="has-text-black is-size-6 has-text-weight-semibold">Details</span>
+                <% end %>
+              </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</section>
