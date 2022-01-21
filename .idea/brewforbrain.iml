@@ -40,6 +40,7 @@
     <orderEntry type="library" scope="PROVIDED" name="activestorage (v7.0.1, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v7.0.1, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="administrate (v0.16.0, asdf: 3.0.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.16, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bindex (v0.8.1, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootsnap (v1.10.1, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.4, asdf: 3.0.2) [gem]" level="application" />
@@ -48,6 +49,7 @@
     <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.6, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="datetime_picker_rails (v0.0.7, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debug (v1.4.0, asdf: 3.0.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="devise (v4.8.1, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.5.0, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="digest (v3.1.0, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.10.0, asdf: 3.0.2) [gem]" level="application" />
@@ -77,6 +79,7 @@
     <orderEntry type="library" scope="PROVIDED" name="net-smtp (v0.3.1, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nio4r (v2.5.8, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.13.1, asdf: 3.0.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="orm_adapter (v0.5.0, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v1.2.3, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="puma (v5.5.2, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="racc (v1.6.0, asdf: 3.0.2) [gem]" level="application" />
@@ -89,6 +92,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rake (v13.0.6, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ransack (v2.5.0, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="reline (v0.3.1, asdf: 3.0.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="responders (v3.0.1, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="roo (v2.8.3, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-core (v3.10.1, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v3.10.1, asdf: 3.0.2) [gem]" level="application" />
@@ -109,6 +113,7 @@
     <orderEntry type="library" scope="PROVIDED" name="timeout (v0.2.0, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="turbo-rails (v1.0.1, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v2.0.4, asdf: 3.0.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.9, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="web-console (v4.2.0, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-driver (v0.7.5, asdf: 3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-extensions (v0.1.5, asdf: 3.0.2) [gem]" level="application" />

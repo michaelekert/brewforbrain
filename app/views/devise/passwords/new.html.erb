@@ -1,0 +1,34 @@
+<section class="hero is-fullheight">
+  <div class="container">
+    <div class="hero-body has-text-centered">
+      <div class="login">
+        <%= image_tag 'Logo.png' %>
+        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+
+          <div class="field mt-5">
+            <div class="control">
+              <%= f.email_field :email, class: "input is-medium is-rounded", type: "email", placeholder: "hello@example.com", autocomplete: "email", autofocus: true %>
+            </div>
+          </div>
+          <button class="button is-block is-fullwidth is-warning is-medium is-rounded" type="submit">
+            Send me reset password instructions
+          </button>
+        <% end %>
+        <br>
+        <nav class="level">
+          <div class="level-item has-text-centered">
+            <div>
+              <a href=<%= new_user_session_path %>>Zaloguj się</a>
+            </div>
+          </div>
+          <div class="level-item has-text-centered">
+            <div>
+              <a href=<%= new_user_registration_path %>>Zarejestruj się</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>

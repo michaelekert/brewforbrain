@@ -48,6 +48,7 @@ gem "bootsnap", require: false
 gem "administrate"
 gem "roo", "~> 2.8.0"
 gem "ransack"
+gem 'devise'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
