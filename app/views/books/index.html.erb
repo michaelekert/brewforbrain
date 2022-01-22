@@ -39,19 +39,30 @@
           Kontakt
         </a>
       </div>
-
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-warning">
-              <strong>Zarejestruj się</strong>
-            </a>
-            <a class="button is-light">
-              Zaloguj się
-            </a>
+      <% if !current_user %>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <button class="button is-warning">
+                <%= link_to "Zarejestruj się", new_user_registration_path, class: "has-text-black" %>
+              </button>
+              <button class="button is-light">
+                <%= link_to "Zaloguj się", user_session_path, class: "has-text-black" %>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      <% else %>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <button class="button is-warning">
+                <%=link_to "Wyloguj się", destroy_user_session_path, 'data-turbo-method': :delete, class: "has-text-black" %>
+              </button>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
   </nav>
 </div>

@@ -3,7 +3,7 @@
     <div class="hero-body has-text-centered">
       <div class="login">
         <%= image_tag 'Logo.png' %>
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }) do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
 
           <div class="field mt-5">
@@ -23,7 +23,7 @@
             </div>
           </div>
           <br/>
-          <button class="button is-block is-fullwidth is-warning is-medium is-rounded" type="submit">
+          <button class="button is-block is-fullwidth is-warning is-medium is-rounded" type="submit" data="turbo:false">
             Zarejestruj się
           </button>
         <% end %>
