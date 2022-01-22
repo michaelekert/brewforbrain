@@ -4,7 +4,7 @@ Rails.application.routes.draw do
       resources :books do
         post :import, on: :collection
       end
-
+      resources :users
       root to: "books#index"
     end
 
