@@ -1,14 +1,33 @@
-<div class="mx-auto md:w-2/3 w-full flex">
-  <div class="mx-auto">
-    <% if notice.present? %>
-      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-    <% end %>
+<section class="hero is-warning">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        <strong><%= @book.name %></strong>
+      </h1>
+      <h2 class="subtitle">
+        Cena: <strong><%= @book.price %> zł</strong>
+      </h2>
+    </div>
+  </div>
+</section>
+<div class="box">
+  <article class="media">
+    <div class="media-left">
+      <figure class="image is-256x256">
+        <img src="https://fuzati.com/wp-content/uploads/2016/12/Ruby-Logo.png" alt="Image">
+      </figure>
+    </div>
+    <div class="media-content">
+      <div class="content">
+        <h5>
+          Zostało <small><%= @book.quantity %> sztuk</small>
+          <br>
+        </h5>
+        <h6>Przykładowy opis opis książki pobierany z bazy danych</h6>
+      </div>
 
-    <%= render @book %>
-
-    <div class="inline-block ml-2">
+      <%= button_tag 'Dodaj do koszyka', class: "has-text-black button is-warning" %>
 
     </div>
-
-  </div>
+  </article>
 </div>
