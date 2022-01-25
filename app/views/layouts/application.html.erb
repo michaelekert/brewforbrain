@@ -21,6 +21,7 @@
   <% if flash[:error] %>
     <div class="notification is-danger"><%= flash[:error] %></div>
   <% end %>
+  <%if ['index', 'show'].include? action_ngitame%>
   <section class="hero is-ligth is-small">
     <div class="hero-body">
       <div class="container has-text-centered">
@@ -42,7 +43,7 @@
               Zamówienia
             </a>
           <% end %>
-          <%if action_name != 'show' %>
+          <%if action_name == 'index'%>
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">
               Filtry
@@ -85,6 +86,7 @@
       </div>
     </nav>
   </div>
+    <%end %>
       <%= yield %>
 
   </body>
