@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'cart/show'
+  get 'cart/edit'
+  get 'cart/confirmation'
   devise_for :users
   namespace :admin do
       resources :books do
