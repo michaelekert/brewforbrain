@@ -58,6 +58,10 @@
           <a class="navbar-item">
             Kontakt
           </a>
+          <a class="navbar-item">
+            Koszyk
+            <%= current_cart.line_items.map {|e| e.quantity}.sum %>
+          </a>
         </div>
         <% if !current_user %>
           <div class="navbar-end">

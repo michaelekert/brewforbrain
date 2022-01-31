@@ -18,7 +18,12 @@
                 </div>
                 <span class="button is-warning">
                 <%= link_to book_path(book) do %>
-                  <span class="has-text-black is-size-6 has-text-weight-semibold">Details</span>
+                  <span class="has-text-black is-size-6 has-text-weight-semibold">Szczegóły</span>
+                <% end %>
+              </span>
+                <span class="button is-warning">
+                <%= button_to add_item_cart_path(book_id: book), method: :post, data: { turbo: false } do %>
+                  <span class="has-text-black is-size-6 has-text-weight-semibold">Dodaj do koszyka</span>
                 <% end %>
               </span>
               </div>
@@ -28,4 +33,5 @@
       <% end %>
     </div>
   <% end %>
+
 </section>
