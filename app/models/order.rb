@@ -1,6 +1,6 @@
 class Order < ApplicationRecord
-  belongs_to :shipping_type
-  has_many :line_items, :inverse_of => :order
+  belongs_to :shipping_type, optional: true
+  has_many :line_items
   has_one :address
 
   def full_cost

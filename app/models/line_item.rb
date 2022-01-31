@@ -1,6 +1,6 @@
 class LineItem < ApplicationRecord
   belongs_to :book
-  belongs_to :order, :inverse_of => :line_items
+  belongs_to :order
 
   def full_price
     unit_price * quantity
