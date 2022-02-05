@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  resource :cart, controller: "cart", only: [:show, :update, :edit] do
+    member do
+      post :add_item
+      post :remove_item
+    end
+  end
   devise_for :users
   namespace :admin do
       resources :books do

@@ -21,7 +21,7 @@
   <% if flash[:error] %>
     <div class="notification is-danger"><%= flash[:error] %></div>
   <% end %>
-  <%if ['index', 'show'].include? action_name%>
+  <%if ['index', 'show', 'edit'].include? action_name%>
   <section class="hero is-ligth is-small">
     <div class="hero-body">
       <div class="container has-text-centered">
@@ -58,6 +58,12 @@
           <a class="navbar-item">
             Kontakt
           </a>
+
+            <%= link_to cart_path, class: "navbar-item" do%>
+            Koszyk
+            <%= current_cart.line_items.map {|e| e.quantity}.sum %> Ilość
+              <%end %>
+
         </div>
         <% if !current_user %>
           <div class="navbar-end">
