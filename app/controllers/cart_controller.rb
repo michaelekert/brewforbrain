@@ -1,5 +1,6 @@
 class CartController < ApplicationController
-  before_action
+  before_action :authenticate_user!
+
 
   def show
     @cart = current_cart
@@ -20,6 +21,7 @@ class CartController < ApplicationController
         flash[:error] = "Nie ma tyle sztuk na magazynie"
       else
       item.save
+      flash[:notice] = "Dodano produkt do koszyka"
       end
     else
       order.line_items.create book: book,
