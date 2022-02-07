@@ -21,7 +21,7 @@
   <% if flash[:error] %>
     <div class="notification is-danger"><%= flash[:error] %></div>
   <% end %>
-  <%if ['index', 'show', 'edit'].include? action_name%>
+  <%if ['index', 'show','edit', 'confirmation'].include? action_name%>
   <section class="hero is-ligth is-small">
     <div class="hero-body">
       <div class="container has-text-centered">

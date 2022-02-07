@@ -49,7 +49,7 @@ gem "administrate"
 gem "roo", "~> 2.8.0"
 gem "ransack"
 gem 'devise'
-
+gem 'simple_form'
 # Use Sass to process CSS
 # gem "sassc-rails"
 

@@ -1,4 +1,30 @@
-<div>
-  <h1 class="font-bold text-4xl">Cart#edit</h1>
-  <p>Find me in app/views/cart/edit.html.erb</p>
+<div class="columns is-centered">
+<h1 class="title is-1 mt-5">Dostawa</h1>
+</div>
+<div class="columns is-mobile is-centered">
+  <div class="column is-two-fifths">
+    <%= simple_form_for @cart, url: cart_path do |f| %>
+      <%= f.simple_fields_for :address do |a| %>
+        <%= a.label :email,  "Adres e-mail", class: "label" %>
+        <%= a.input_field :email,class: "input" %>
+        <%= a.label :first_name, "Imię",class: "label" %>
+        <%= a.input_field :first_name,class: "input"  %>
+        <%= a.label :last_name, "Nazwisko",class: "label" %>
+        <%= a.input_field :last_name,class: "input"  %>
+        <%= a.label :city, "Miasto",class: "label" %>
+        <%= a.input_field :city,class: "input"  %>
+        <%= a.label :zip_code, "Kod pocztowy",class: "label"  %>
+        <%= a.input_field :zip_code,class: "input"  %>
+        <%= a.label :street, "Ulica",class: "label" %>
+        <%= a.input_field :street,class: "input"  %>
+      <% end %>
+      <%= f.label :comment, "Komentarz",class: "label" %>
+      <%= f.input_field :comment, class: "textarea" %>
+      <div class="columns is-mobile is-centered">
+      <%= button_tag confirmation_cart_path ,class: "button is-warning has-text-black mt-5" do %>
+        Zapisz i przejdź dalej
+      <% end %>
+      </div>
+    <% end %>
+  </div>
 </div>

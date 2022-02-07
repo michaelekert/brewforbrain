@@ -4,9 +4,13 @@ Rails.application.routes.draw do
     member do
       post :add_item
       post :remove_item
+      get :confirmation
+      post :finish
     end
   end
   devise_for :users
+
+
   namespace :admin do
       resources :books do
         post :import, on: :collection

@@ -1,4 +1,39 @@
-<div>
-  <h1 class="font-bold text-4xl">Cart#confirmation</h1>
-  <p>Find me in app/views/cart/confirmation.html.erb</p>
+<div class="columns is-centered mt-6">
+<table class="table table-striped">
+  <thead>
+  <th>Produkt</th>
+  <th>Liczba sztuk</th>
+  <th>Cena jednostkowa</th>
+  <th>Cena całkowita</th>
+  </thead>
+  <tbody>
+  <% @cart.line_items.each do |line_item| %>
+    <tr>
+      <td><%=line_item.item_name%>
+      <td><%= line_item.quantity %></td>
+      <td><%=line_item.unit_price %> zł</td>
+      <td><%=line_item.full_price %> zł</td>
+    </tr>
+  <% end %>
+  <tr>
+    <td>Dostawa: <%= @cart.shipping_type.name %></td>
+    <td></td>
+    <td colspan="2"><%=@cart.shipping_cost %> zł</td>
+  </tr>
+  <tr>
+    <td colspan="4"><hr/></td>
+  </tr>
+  <tr>
+    <th>Całość</th>
+    <td></td>
+    <td colspan="2"><%= @cart.full_cost %> zł</td>
+  </tr>
+  </tbody>
+</table>
+</div>
+<div class="columns is-centered">
+<%= button_to finish_cart_path, method: :post, class: "button is-warning" do %>
+  <span class="fa fa-check"></span>
+  Potwierdzam zamówienie z obowiązkiem zapłaty
+<% end %>
 </div>
