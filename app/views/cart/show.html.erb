@@ -1,3 +1,9 @@
+<% if @cart.line_items.blank? %>
+  <div class="columns is-centered mt-6">
+    <h1>Dodaj coś do koszyka</h1>
+  </div>
+
+  <% else %>
 <ul>
   <% @cart.line_items.each do |item| %>
     <li class="m-5 p-3">
@@ -11,10 +17,14 @@
               <p class="is-size-4 is-capitalized has-text-weight-semibold has-text-left"><%= item.item_name %></p>
             </div>
             <div class="column is-one-quarter">
-              <p class="is-size-5 has-text-centered"><%= item.unit_price %></p>
+              <p class="is-size-5 has-text-centered">Cena za sztukę <%= item.unit_price %> zł <br>Ilość: <%= item.quantity %></p>
             </div>
-            <div class="column is-one-quarter">
-              <p class="is-size-5 has-text-right"><%= item.quantity %></p>
+            <div class="column is-one-fifth">
+            <span class="button is-danger">
+                <%= button_to remove_item_cart_path(book_id: item.book.id), method: :post, data: { turbo: false } do %>
+                  <span class="has-text-black is-size-6 has-text-weight-semibold">Usuń z koszyka</span>
+                <% end %>
+              </span>
             </div>
           </div>
         </div>
@@ -27,3 +37,4 @@
     Przejdź dalej
   <% end %>
 </div>
+<% end %>

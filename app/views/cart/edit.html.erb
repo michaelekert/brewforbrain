@@ -18,6 +18,8 @@
         <%= a.label :street, "Ulica",class: "label" %>
         <%= a.input_field :street,class: "input"  %>
       <% end %>
+      <%= f.label :shipping_type,"Sposób dostawy" ,class: "label" %>
+      <%= f.association :shipping_type, label: "" ,as: :radio_buttons%>
       <%= f.label :comment, "Komentarz",class: "label" %>
       <%= f.input_field :comment, class: "textarea" %>
       <div class="columns is-mobile is-centered">

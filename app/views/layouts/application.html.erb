@@ -60,9 +60,8 @@
           </a>
 
             <%= link_to cart_path, class: "navbar-item" do%>
-            Koszyk
-            <%= current_cart.line_items.map {|e| e.quantity}.sum %> Ilość
-              <%end %>
+            Koszyk: <%= ss = current_cart.line_items.map {|e| e.quantity}.sum %> <%= ss == 1 ? "produkt" : "produkty"  %>
+            <%end %>
 
         </div>
         <% if !current_user %>

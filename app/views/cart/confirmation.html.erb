@@ -31,7 +31,13 @@
   </tbody>
 </table>
 </div>
-<div class="columns is-centered">
+<div class="columns is-centered mt-6">
+  <p>Aby zamówienie zostało przyjęte prosimy o wpłate na podany rachunek: 0000 0000 0000 0000 0000. W tytule przelewu prosimy podać numer zamówienia.</p>
+</div>
+<div class="columns is-centered mt-6">
+Twój numer zamówienia to: <strong><%= current_cart.id %></strong>
+</div>
+<div class="columns is-centered mt-6">
 <%= button_to finish_cart_path, method: :post, class: "button is-warning" do %>
   <span class="fa fa-check"></span>
   Potwierdzam zamówienie z obowiązkiem zapłaty

@@ -61,11 +61,14 @@ class CartController < ApplicationController
   def remove_item
     order = current_cart
     book = Book.find(params[:book_id])
-    item = order.line_items.where(book: book).first
+    if item = order.line_items.where(book: book).first
+    book.quantity = item.quantity
     if item
       item.destroy
     end
-    redirect_to :back, notice: "Usunięto produkt z koszyka"
+    book.save!
+    end
+    redirect_to root_path, notice: "Usunięto produkt z koszyka"
   end
 
   private
