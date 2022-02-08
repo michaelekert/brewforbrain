@@ -10,6 +10,8 @@ class BookDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     name: Field::String,
+    image: Field::String,
+    text: Field::Text,
     price: Field::String.with_options(searchable: false),
     quantity: Field::Number,
     created_at: Field::DateTime,
@@ -24,6 +26,8 @@ class BookDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
     id
     name
+    image
+    text
     price
     quantity
   ].freeze
@@ -33,6 +37,8 @@ class BookDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     id
     name
+    image
+    text
     price
     quantity
     created_at
@@ -44,6 +50,8 @@ class BookDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     name
+    image
+    text
     price
     quantity
   ].freeze
