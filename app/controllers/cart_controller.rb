@@ -77,6 +77,7 @@ class CartController < ApplicationController
     params.require(:order).permit(
       :shipping_type_id,
       :comment,
+      :user_id,
       :address_attributes => [
         :first_name,
         :last_name,

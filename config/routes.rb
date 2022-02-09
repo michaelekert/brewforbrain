@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'orders/index'
 
   resource :cart, controller: "cart", only: [:show, :update, :edit] do
     member do
@@ -9,9 +10,13 @@ Rails.application.routes.draw do
     end
   end
   devise_for :users
-
+  get "/orders", to: "orders#index"
 
   namespace :admin do
+    resources :orders
+    resources :addresses
+    resources :shipping_types
+    resources :line_items
       resources :books do
         post :import, on: :collection
       end
