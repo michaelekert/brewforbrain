@@ -62,7 +62,7 @@ class CartController < ApplicationController
     order = current_cart
     book = Book.find(params[:book_id])
     if item = order.line_items.where(book: book).first
-    book.quantity = item.quantity
+    book.quantity += item.quantity
     if item
       item.destroy
     end

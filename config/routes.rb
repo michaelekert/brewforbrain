@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :orders
     resources :addresses
-    resources :shipping_types
+    resources :shipping_typesr
     resources :line_items
       resources :books do
         post :import, on: :collection
