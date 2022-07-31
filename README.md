@@ -1,24 +1,35 @@
-# README
+![Logo](app/assets/images/Logo.png)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+Prosta aplikacja, która ma symulować sklep internetowy. Aplikacja została stworzona na potrzeby projektu na studiach.
 
-* System dependencies
+### Aplikacja została napisana za pomocą:
+- Rails 7.0.1
+- Bulma 0.9.3
 
-* Configuration
+### Gem'y wykorzystywane do projektu:
+- Devise
+- Roo
+- Administrate
+- Simple Form
+- Ransack
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
+## Właściwości
+- Logowanie i rejestracja za pomocą gem'a Devise
+- Dodawanie i usuwanie z koszyka
+- Panel admina z możliwością przeglądania modeli 
+- Przeglądanie zamówień złożonych przez użytkownika
+- Możliwość zaimportowania pliku csv w celu dodania produktu do magazynu
+- Użytkownik ma możliwość sortowania książek po cenie i po nazwie
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Warunki
+- Tylko użytkownika zalogowany może dodać produkty do koszyka i złożyć zamówienie
+- Admin ma możliwość zbanowania konta użytkownika 
+- Nie można dodać wiekszę ilości książek niż jest na stanie
 
-* ...
+## Podziękowania
+Podziękowania dla Kacpra Nowaka za stworzenie idelanego Logo ;)
