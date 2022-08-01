@@ -32,4 +32,4 @@ Prosta aplikacja, która ma symulować sklep internetowy. Aplikacja została stw
 - Nie można dodać wiekszę ilości książek niż jest na stanie
 
 ## Podziękowania
-Podziękowania dla Kacpra Nowaka za stworzenie idelanego Logo ;)
+Podziękowania dla Kacpra Nowaka za stworzenie idealnego Logo ;)
